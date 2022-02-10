@@ -1,7 +1,7 @@
 import { buildProps } from '@element-plus/utils-v2'
 import { useTooltipContentProps } from '@element-plus/components/tooltip'
 
-export const usePopoverProps = {
+export const usePopoverProps = buildProps({
   appendToBody: { type: Boolean, default: undefined },
   content: useTooltipContentProps.content,
   popperStyle: useTooltipContentProps.popperStyle,
@@ -15,12 +15,10 @@ export const usePopoverProps = {
     default: 'light',
   },
   teleported: useTooltipContentProps.teleported,
-  ...buildProps({
-    title: String,
+  title: String,
 
-    width: {
-      type: [String, Number],
-      default: 150,
-    },
-  }),
-}
+  width: {
+    type: [String, Number],
+    default: 150,
+  },
+})
