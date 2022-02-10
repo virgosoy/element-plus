@@ -1,4 +1,4 @@
-import { buttonType } from '@element-plus/components/button'
+import { buttonTypes } from '@element-plus/components/button'
 import { QuestionFilled } from '@element-plus/icons-vue'
 import {
   buildProps,
@@ -20,12 +20,12 @@ export const popconfirmProps = buildProps({
   },
   confirmButtonType: {
     type: String,
-    values: buttonType,
+    values: buttonTypes,
     default: 'primary',
   },
   cancelButtonType: {
     type: String,
-    values: buttonType,
+    values: buttonTypes,
     default: 'text',
   },
   icon: {
